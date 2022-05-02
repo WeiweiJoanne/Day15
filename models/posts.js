@@ -7,13 +7,17 @@ const postSchema = new mongoose.Schema({
   },
   content: {
     type: String,
-    require:[true,"貼文內容需填寫"]
+    require: [true, "貼文內容需填寫"]
   },
-  createAt:{
+  image: {
+    type: String,
+    default: ""
+  },
+  createAt: {
     type: Date,
     default: Date.now
   }
-},{
+}, {
   versionKey: false
 });
 
